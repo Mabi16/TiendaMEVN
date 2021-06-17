@@ -9,7 +9,7 @@
       text-white
     "
   >
-    <a class="navbar-brand h5 p-3" href="#">TiendaBD</a>
+    <router-link class="navbar-brand h5 p-3" to="/">TiendaBD</router-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -25,7 +25,13 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active" v-for="(p, i) in pages" :key="i">
-          <a class="nav-link text-white h6 p-3" href="#">{{p.name}} </a>
+          <router-link
+            class="nav-link text-white h6 p-3"
+            v-if="p.slug != 'inicio'"
+            :to="'/' + p.slug"
+          >
+            {{ p.name }}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -33,10 +39,10 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState } from "vuex";
 export default {
-      computed: {
-            ...mapState(["pages"]),
-      },
+  computed: {
+    ...mapState(["pages"]),
+  },
 };
 </script>
