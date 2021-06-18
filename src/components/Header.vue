@@ -7,9 +7,10 @@
       bg-info
       sticky-top
       text-white
+      shadow
     "
   >
-    <router-link class="navbar-brand h5 p-3" to="/">TiendaBD</router-link>
+    <router-link class="navbar-brand h5 p-3 ms-4" to="/">TiendaBD</router-link>
     <button
       class="navbar-toggler"
       type="button"
@@ -26,7 +27,7 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active" v-for="(p, i) in pages" :key="i">
           <router-link
-            class="nav-link text-white h6 p-3"
+            class="nav-link text-white h6 p-3 border-start border-lighte rounded-start"
             v-if="p.slug != 'inicio'"
             :to="'/' + p.slug"
           >
@@ -35,12 +36,15 @@
         </li>
       </ul>
     </div>
+    <CartSummary />
   </nav>
 </template>
 
 <script>
 import { mapState } from "vuex";
+import CartSummary from "./CartSummary";
 export default {
+  components: {CartSummary},
   computed: {
     ...mapState(["pages"]),
   },

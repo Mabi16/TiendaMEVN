@@ -1,8 +1,9 @@
 <template>
-  <div class="container">
+  <div>
     <Header />
-
-    <router-view />
+    <div class="container">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -16,10 +17,12 @@ export default {
   },
   methods: {
     ...mapActions(["setPagesAction", "setCategoriesAction"]),
+    ...mapActions({ initializeCart: "cart/initializeCart" }),
   },
   created() {
     this.setPagesAction();
     this.setCategoriesAction();
+    this.initializeCart(this.$store);
   },
 };
 </script>
