@@ -10,7 +10,7 @@ export default new VueRouter({
       mode: "history",
 
       routes: [
-            { path: "/categories/:category", component: ProductList },
+            { path: "/categorias/:category", component: ProductList },
             { path: "/:slug?", component: Pages },
             { path: "*", redirect: "/" },
       ],
