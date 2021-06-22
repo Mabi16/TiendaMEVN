@@ -1,7 +1,7 @@
 <template>
   <div class="float-right text-white m-3 h6">
     <span v-if="itemCount > 0">
-      {{itemCount}} item(s) {{ totalPrice | currency}}
+      {{itemCount}}  {{ totalPrice | currency}}
     </span>
 
     <span v-else>

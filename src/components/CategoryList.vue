@@ -24,3 +24,13 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+a.router-link-active {
+  border: 1px solid #eb4d55!important;
+  border-radius: 10px;
+  border-color: #eb4d55!important;
+  background:white!important;
+  color: #eb4d55;
+}
+</style>

@@ -41,7 +41,7 @@
               <button class="btn btn-danger float-start" @click="handleClearCart">
                 Limpiar carrito <i class="fa fa-trash"></i>
               </button>
-              <router-link to="/checkout" class="btn btn-primary float-end"
+              <router-link to="/checkout" class="btn shadow float-end" style="background-color:#34c26b; color:white;"
                 >Comprar <i class="fa fa-angle-right"></i>
               </router-link>
             </td>
