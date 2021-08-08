@@ -1,24 +1,29 @@
 <template>
   <div class="row mt-3">
     <CategoryList />
-    <div class="col-9">
-      <div class="row">
-        <div class="col-4 mt-3" v-for="(p,i) in products" :key="i">
-          <p>
-            <img :src="productImages + p.image" class="img-fluid">
-          </p>
-          <h3>
+    <div class="col-md-10 px-5">
+      <div class="row d-flex justify-content-between">
+        <div class="card col-3 mt-3 me-2 card border border-dark" v-for="(p,i) in products" :key="i" style="width:30%; height:auto;">
+          
+            <img :src="productImages + p.image" class="img-fluid border-dark border-bottom card-img-top" >
+            <div class="card-body">
+          <h3 class="card-title">
             {{p.name}}
           </h3>
           <p>
             {{p.description}}
           </p>
           <p>
-            {{p.price | currency}}
+             Precio: <b>{{p.price | currency}}</b>
           </p>
-          <p>
+          
+          
+
+            </div>
+            <div class="d-flex justify-content-center card-footer" style="margin-left:-4%; margin-right:-4%">
             <button class="btn btn-primary" @click="handleAddProduct(p)">Agregar al carro</button>
-          </p>
+
+            </div>
         </div>
       </div>
       <ProductPagination />

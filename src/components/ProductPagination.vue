@@ -7,7 +7,7 @@
       <li class="page-item" v-for="(p, i) in pageCount" :key="i" @click="getProducts(p)">
         <button
           class="btn mx-1"
-          :class="[i + 1 == currentPage ? 'btn-primary' : 'btn-secondary']"
+          :class="[i + 1 == currentPage ? 'col-pag' : 'btn-secondary']"
         >
           {{ p }}
         </button>

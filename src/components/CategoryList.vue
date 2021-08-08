@@ -1,5 +1,5 @@
 <template>
-  <div class="col-3">
+  <div class="col-md-2">
     <h3>Categorias</h3>
 
     <ul class="nav flex-column mt-3">

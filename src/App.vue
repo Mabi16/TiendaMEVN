@@ -32,11 +32,25 @@ export default {
 </script>
 
 <style>
+ html  {
+
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+
+}
 .btn:focus{
   outline: none !important;
   box-shadow: none !important;
 }
 .rojo{
   color: red;
+}
+.col-pag{
+  color:white;
+  background-color: #eb4d55;
+
 }
 </style>
